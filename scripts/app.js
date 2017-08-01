@@ -1,10 +1,10 @@
 'use strict';
 
-var pastProjects = [];
+var projectArray = [];
 
-function project(name, url, thumb, describe){
-  this.name = name;
-  this.url = url;
-  this.thumb = thumb;
-  this.describe = describe;
+function Project(myProjects){
+  this.name = myProjects.name;
+  this.url = myProjects.url;
+  this.describe = myProjects.describe;
 }
+console.log(projectArray);
