@@ -1,4 +1,41 @@
-img {
-  height: 3%;
-  width: 3%;
+* {
+  border: 1px dotted red;
+}
+
+#hamburger {
+  display: none;
+}
+
+.social {
+  float: right;
+  margin-right: .625em;
+  text-decoration: none;
+  color: black;
+  margin-top: 1.5%;
+}
+
+.nav-bar {
+  background-color: beige;
+  height: 3em;
+}
+
+.nav-buttons {
+  height: 100%;
+}
+
+@media screen and (max-width: 479px){
+  .nav-buttons, .social {
+    display: none;
+  }
+  .nav-bar {
+    width: 12%;
+  }
+  .thumbnail-container, .thumbnail, iframe {
+    display: none;
+  }
+  #hamburger {
+    display: inline;
+    height: 100%;
+    width: 100%;
+  }
 }
