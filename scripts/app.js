@@ -9,10 +9,13 @@ function Project(myProjects){
 }
 console.log(projectArray);
 
-Project.prototype.toHTML = function() {
-  var $newProject = $('div.thumbnail-container').clone();
+function toHTML() {
+  $(document).ready(function () {
+    var $newProject = $('div.thumbnail-container').clone();
 
-  $newProject.find('h1').text(this.name);
-  $newProject.find('iframe').attr('src', this.url);
-  $newProject.find('p').text(this.describe);
+    $newProject.find('h1').text(this.name);
+    $newProject.find('iframe').attr('src', this.url);
+    $newProject.find('p').text(this.describe);
+  });
 }
+toHTML();
