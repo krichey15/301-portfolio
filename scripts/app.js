@@ -1,21 +1,24 @@
 'use strict';
 
-var projectArray = [];
+var projects = [];
 
-function Project(myProjects){
-  this.name = myProjects.name;
-  this.url = myProjects.url;
-  this.describe = myProjects.describe;
+function Project(rawDataProj){
+  this.name = rawDataProj.name;
+  this.url = rawDataProj.url;
+  this.describe = rawDataProj.describe;
 }
-console.log(projectArray);
+console.log(projects);
 
-function toHTML() {
-  $(document).ready(function () {
-    var $newProject = $('div.thumbnail-container').clone();
+Project.prototype.toHtml = function () {
+  var $newProject = $('div.thumbnail-container').clone();
 
-    $newProject.find('h1').text(this.name);
-    $newProject.find('iframe').attr('src', this.url);
-    $newProject.find('p').text(this.describe);
-  });
+  $newProject.find('h1').html(this.name);
+  $newProject.find('iframe').attr('src', this.url);
+  $newProject.find('p').html(this.describe);
+
+  return $newProject;
 }
-toHTML();
+
+myProjects.forEach(function(projectObject){
+  projects.push(new Project(projectObject));
+});
