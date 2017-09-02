@@ -14,8 +14,9 @@ Project.prototype.toHtml = function () {
   $newProject.removeClass('thumbnail-container');
 
   $newProject.find('h1').text(this.name);
-  $newProject.find('iframe').attr('src', this.url);
-  $newProject.find('p').text(this.describe);
+  $newProject.find('img').attr('src', this.url);
+  $newProject.find('img').attr('alt', this.name);
+  $newProject.find('p').html(this.describe);
 
   return $newProject;
 }
@@ -25,5 +26,5 @@ myProjects.forEach(function(projectObject){
 });
 
 projects.forEach(function(project) {
-  $('.thumbnail').append(project.toHtml());
+  $('body').append(project.toHtml());
 });
