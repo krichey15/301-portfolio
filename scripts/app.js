@@ -10,11 +10,12 @@ function Project(rawDataProj){
 console.log(projects);
 
 Project.prototype.toHtml = function () {
-  var $newProject = $('div.thumbnail-container').clone();
+  var $newProject = $('div.thumbnail-container .thumbnail').clone();
+  $newProject.removeClass('thumbnail-container');
 
-  $newProject.find('h1').html(this.name);
-  $newProject.find('iframe').attr('src', this.url);
-  $newProject.find('p').html(this.describe);
+  $newProject.find('.thumbnail h1').html(this.name);
+  $newProject.find('.thumbnail iframe').attr('src', this.url);
+  $newProject.find('.thumbnail p').html(this.describe);
 
   return $newProject;
 }
