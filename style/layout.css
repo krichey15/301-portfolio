@@ -23,7 +23,7 @@
   height: 100%;
 }
 
-@media screen and (max-width: 479px){
+/*@media screen and (max-width: 479px){
   .nav-buttons, .social {
     display: none;
   }
@@ -38,4 +38,4 @@
     height: 100%;
     width: 100%;
   }
-}
+}*/

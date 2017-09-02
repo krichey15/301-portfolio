@@ -14,7 +14,7 @@ var myProjects = [
   {
     name: 'Code 101 Trial',
     url: 'https://krichey15.github.io/',
-    describe: 'My first ever attempt to make a webpage live(still trying to figure out why it is not.)'
+    describe: 'My first ever attempt to make a webpage live(still trying to figure out why it is not working.)'
   }
 ];
 console.log(myProjects);
