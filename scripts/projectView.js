@@ -15,6 +15,10 @@ projectView.populateFilter = function (){
   });
 }
 
-$(document).ready(function (){
+projectView.initIndex = function () {
+  Project.all.forEach(function(article) {
+    $('body').append(article.toHtml())
+  });
+
   projectView.populateFilter();
-})
+}
