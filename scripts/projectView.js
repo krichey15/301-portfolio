@@ -15,6 +15,8 @@ projectView.populateFilter = function (){
   });
 }
 
+
+
 $(document).ready(function (){
   projectView.populateFilter();
 })
