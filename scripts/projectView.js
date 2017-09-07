@@ -16,15 +16,23 @@ projectView.populateFilter = function (){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 projectView.initIndex = function () {
   Project.all.forEach(function(article) {
     $('body').append(article.toHtml())
   });
 
+<<<<<<< HEAD
   projectView.populateFilter();
 }
 =======
 $(document).ready(function (){
   projectView.populateFilter();
 })
+>>>>>>> master
+=======
+  projectView.populateFilter();
+}
 >>>>>>> master
