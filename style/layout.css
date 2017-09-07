@@ -1,6 +1,6 @@
-* {
+/** {
   border: 1px dotted red;
-}
+}*/
 
 #hamburger {
   display: none;
@@ -11,7 +11,11 @@
   margin-right: .625em;
   text-decoration: none;
   color: black;
-  margin-top: 1.5%;
+}
+
+.icon {
+  height: 45px;
+  width: 45px;
 }
 
 .nav-bar {
@@ -23,7 +27,7 @@
   height: 100%;
 }
 
-@media screen and (max-width: 479px){
+/*@media screen and (max-width: 479px){
   .nav-buttons, .social {
     display: none;
   }
@@ -38,4 +42,4 @@
     height: 100%;
     width: 100%;
   }
-}
+}*/

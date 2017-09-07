@@ -12,34 +12,40 @@
   </head>
 
   <body>
-    <!-- I want a Nav bar that is fixed to the screen so that as you scroll it stays in place. I want to link my LinkedIn, GitHub, and Instagram and eventually just have the logos of those websites as the links. TODO: Get missing user names.   -->
+
   <div class="nav-bar">
     <img id="hamburger" src="assets/hamburger.png" alt="Menu Icon"/>
     <button class="nav-buttons" type="button" name="Home">Home</button>
     <button class="nav-buttons" type="button" name="About">About</button>
     <button class="nav-buttons" type="button" name="Work">Work</button>
     <button class="nav-buttons" type="button" name="Contact">Let's Meet</button>
-    <a class="social" href="https://www.instagram.com/">Instagram</a>
-    <a class="social" href="https://www.github.com/krichey15">GitHub</a>
-    <a class="social" href="https://www.linkedin.com">LinkedIn</a>
+    <a class="social" href="https://www.instagram.com/"><img class="icon" src="assets/instagram.png" alt="Instagram"></a>
+    <a class="social" href="https://www.github.com/krichey15"><img class="icon" src="assets/github-icon.png" alt="GitHub"></a>
+    <a class="social" href="https://www.linkedin.com"><img class="icon" src="assets/linkedin_circle_color-256.png" alt="LinkedIn"></a>
+
+    <section class="nav-filters">
+      <div>
+        <ul id="filters">
+          <li>
+            <select id="project-filter">
+              <option value="">Project Name</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
 
-<!--TODO: Add all past finsished work into iframes -->
-
   <div class="thumbnail-container">
-    <div class="thumbnail">
-      <h1>Name</h1>
-      <iframe src="" frameborder="0"></iframe>
-      <p>Description</p>
-    </div>
+      <h1></h1>
+      <img src="" alt="">
+      <p></p>
   </div>
 
 <!--TODO: Add all script tags to libraries I plan on using, jquery, handlebars.  -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<<<<<<< HEAD
-=======
-
->>>>>>> master
-    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/rawProjects.js"></script>
+    <script type="text/javascript" src="scripts/project.js"></script>
+    <script type="text/javascript" src="scripts/projectView.js"></script>
   </body>
 </html>
