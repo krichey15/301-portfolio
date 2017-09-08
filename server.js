@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-app.get('/home', function (request, response){
+app.get('/index', function (request, response){
   response.sendFile('index.html', {root: './public'});
 })
 
