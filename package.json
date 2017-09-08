@@ -1,0 +1,23 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "portfolio assignment for 301",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krichey15/301-portfolio.git"
+  },
+  "author": "Kyle Richey <richey.kyle.i@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4"
+  },
+  "bugs": {
+    "url": "https://github.com/krichey15/301-portfolio/issues"
+  },
+  "homepage": "https://github.com/krichey15/301-portfolio#readme"
+}
