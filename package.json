@@ -14,7 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "page": "^1.7.1",
+    "pg": "^7.3.0"
   },
   "bugs": {
     "url": "https://github.com/krichey15/301-portfolio/issues"
