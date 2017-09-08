@@ -1,6 +1,6 @@
 'use strict';
 
-var projectView ={};
+var projectView = {};
 
 projectView.populateFilter = function (){
   $('div').each(function(){

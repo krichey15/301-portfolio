@@ -25,8 +25,8 @@ Project.prototype.toHtml = function () {
   // return $newProject;
 }
 
-Project.loadAll = function (myProjects) {
-  myProjects.forEach(function(ele){
+Project.loadAll = function (rows) {
+  rows.forEach(function(ele){
     Project.all.push(new Project(ele));
   });
 };
@@ -35,17 +35,25 @@ Project.loadAll = function (myProjects) {
 //   $('body').append(project.toHtml());
 // });
 
-Project.fetchAll = function () {
-  if (localStorage.myProjects) {
-    Project.loadAll(JSON.parse(localStorage.myProjects));
-    projectView.initIndex();
-  } else {
-    $.getJSON('data/rawProjects.json', function (myProjects){
-      Project.loadAll(myProjects);
-      localStorage.myProjects = JSON.stringify(myProjects);
-      projectView.initIndex();
-    },function (err){
-      console.log(err);
-    });
-  }
+Project.fetchAll = function (callback) {
+  $.get('/data/rawProjects.json')
+    .then(
+      function(results) {
+        Project.loadAll(results);
+        callback();
+      }
+    )
+
+  // if (localStorage.myProjects) {
+  //   Project.loadAll(JSON.parse(localStorage.myProjects));
+  //   projectView.initIndex();
+  // } else {
+  //   $.getJSON('/data/rawProjects.json', function (myProjects){
+  //     Project.loadAll(myProjects);
+  //     localStorage.myProjects = JSON.stringify(myProjects);
+  //     projectView.initIndex();
+  //   },function (err){
+  //     console.log(err);
+  //   });
+  // }
 }
