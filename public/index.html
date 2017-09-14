@@ -36,17 +36,22 @@
     </section>
   </div>
 
+  <script id="project-template" type="text/x-handlebars-template">
   <div class="thumbnail-container">
-      <h1></h1>
-      <img src="" alt="">
-      <p></p>
+      <h1>{{name}}</h1>
+      <img src="{{url}}" alt="{{name}}" />
+      <p>{{describe}}</p>
   </div>
+</script>
 
 <!--TODO: Add all script tags to libraries I plan on using, jquery, handlebars.  -->
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v4.0.10.js"></script>
-    <script type="text/javascript" src="scripts/rawProjects.js"></script>
-    <script type="text/javascript" src="scripts/project.js"></script>
-    <script type="text/javascript" src="scripts/projectView.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/project.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/projectView.js"></script>
+    <script src="/scripts/controllers/routes.js"></script>
+    <script>
+      Project.fetchAll(projectView.initIndex);
+    </script>
   </body>
 </html>
